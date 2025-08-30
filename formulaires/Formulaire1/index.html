@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title> Formulaire de jovial </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./FontAwesome/css/all.min.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div class="main-container">
+            <h1> Sign Up </h1>
+            <div class="form-container">
+                <form action="#">
+                    <div class="input-field">
+                        <span class="fas fa-user"></span>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    
+                    <div class="input-field">
+                        <span class="fas fa-message"></span>
+                        <input type="email" placeholder="email">
+                    </div>
+                    
+                    <div class="input-field">
+                        <span class="fas fa-key"></span>
+                        <input id="my_password" type="password" placeholder="Password">
+                        <button id="toggle-button"><span class="fas fa-eye-slash"></span></button>
+                    </div>
+                    
+                    <div class="capchat">
+                        Do you Agree ?? <input type="checkbox"> 
+                    </div>
+
+                    <input type="submit" value="Create Account">
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            var i = 0;
+            const button = document.getElementById("toggle-button");
+            const input_password = document.querySelector("#my_password");
+            const span = document.querySelector("#toggle-button span");
+            console.log(span);
+
+            button.addEventListener("click", ()=>{
+
+                if (i == 0) {
+                    span.classList.replace("fa-eye-slash", "fa-eye");
+                    input_password.setAttribute("type", "text");
+                    i ++;
+                } 
+                else{
+                    span.classList.replace("fa-eye", "fa-eye-slash");
+                    input_password.setAttribute("type", "password");
+                    i=0;
+                }
+            });
+            
+        </script>
+    </body>
+</html>

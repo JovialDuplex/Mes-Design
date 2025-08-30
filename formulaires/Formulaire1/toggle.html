@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle with html </title>
+    
+    <style>
+        /* place my element in center */
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height : 100vh;
+        }
+
+        input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            position: relative;
+            height : 100px;
+            width: 175px;
+            background-color: white;
+            border-radius: 5rem;
+            box-shadow: 0 0 15px #0000001e;
+            transition: background-color .2s;
+        }
+
+        input::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background-color: rgb(47, 47, 68);
+            transition: left .2s;
+        }
+
+        input:checked{
+            background-color: #adf1f0;
+        }
+
+        input:checked::after {
+            left: 70%;
+        }
+
+    </style>    
+</head>
+
+<body>
+    <input type="checkbox">
+</body>
+</html>
