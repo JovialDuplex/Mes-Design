@@ -1,0 +1,219 @@
+/* initialize my design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --main-color: #fff;
+    /* --main-color: #ef651a; */
+    /* --bg-color: transparent; */
+    --bg-color: #000;
+    --text-color: #fff;
+    --my-radius: 30px;
+    --other-color: #000;
+    --icon-size: 20px;
+
+}
+
+/* design background and place all to center */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    /* background-image: url("../images/background1.jpg"); */
+    background-size:cover;
+}
+
+/* design main container */
+.main-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: var(--my-radius);
+    /* overflow: hidden; */
+    box-shadow: 0 0 15px var(--main-color);
+    /* background: transparent; */
+    border: 3px solid var(--main-color);
+}
+
+/* design form-container */
+.form-container{
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border-radius: var(--my-radius); */
+    /* background: yellow; */
+    padding: 0 10%;
+}
+
+/* design form-heading text */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-container.register-form h2 {
+    background: var(--bg-color);
+}
+
+/* design input-field */
+.form-container form .input-field {
+    background: linear-gradient(180deg, transparent, #000);
+    position: relative;
+    display: flex;
+    gap:0;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    /* box-shadow: 0 0 15px #fff; */
+    border-radius: var(--my-radius);
+    margin-top: 10%;
+} 
+
+.form-container .input-field input {
+    border-radius: 20px;
+    flex-grow: 1;
+    height: 50px;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 0 45px;
+    color: white;
+    font-size: 20px;
+    /* border: 2px solid #1ef; */
+}
+
+.form-container .input-field .icon {
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    font-size: var(--icon-size);
+    color: var(--text-color);
+    border-radius: 50%;
+}
+
+.form-container .input-field label {
+    color: white;
+    position: absolute;
+    left: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 15px;
+    background: var(--bg-color);
+    transition: .7s ease;
+
+}
+
+/* when input was focused or valid */
+/* .form-container .input-field input:valid ~ label {
+    transform: translateY(0%);
+} */
+
+.form-container .input-field input:focus ~ label {
+    top: 0%;
+    transform: translateY(-50%);
+}
+
+.form-container .input-field .btn-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: var(--icon-size);
+}
+
+/* design submit button*/
+.form-container form .btn {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    height: 35px;
+    border-radius: var(--my-radius);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10%;
+    border: none;
+    background: transparent;
+    color: white;
+    transition: .7s ease;
+    cursor: pointer;
+    box-shadow: 0 0 15px #fff;
+    border: 2px solid #fff;
+    transform: translateX(-50%);
+    transform: scale(1) translateX(-50%);
+}
+
+
+.form-container form .btn:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 15px #000;
+    /* transform: scale(1.1) translateX(-50%); */
+}
+
+.form-container .logreg-link {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-container .logreg-link a {
+    color: #1ef;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* design register login */
+.form-container.register-form {
+    display: none;
+}
+
+/* design social link */
+
+.form-container .social-link {
+    /* background: red; */
+    padding: 10px 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-container .social-link a {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #000;
+    transform: scale(1);
+    color: #fff;
+    transition: .5s ease;
+    cursor:pointer;
+}
+
+.form-container .social-link a:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1);
+
+}

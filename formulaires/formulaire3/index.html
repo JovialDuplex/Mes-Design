@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de connexion a un blog de cuistot </title>
+    <link rel="stylesheet" href="../utilite/FontAwesome/css/all.css">
+    <link rel="stylesheet" href="./assets/css/design.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="login-form form-container">
+            <h2> Login </h2>
+            <form action="#" method="post">
+                <div class="input-field">
+                    <span class="fas icon fa-envelope"></span>
+                    <input type="email" name="email" id="email">
+                    <label for="email"> Email </label>
+                </div>
+                <div class="input-field">
+                    <span class="fas icon fa-lock"></span>
+                    <input type="password" name="password" id="password">
+                    <label for="password"> Password </label>
+                    <button class="btn-icon fas fa-eye-slash"></button>
+                    <!-- <a class="password-rec" style="color:white;">I forgot password</a> -->
+                </div>
+                <button class="btn">Login</button>
+            </form>
+
+            <div class="logreg-link">
+                <p> I not have an Account <a href="#" class="register-bt"> register </a></p>
+            </div>
+
+            <div style="text-align:center; padding: 10px 0; font-size: var(--icon-size); font-weight:bold;"><span style="color: white; text-align: center; "> or </span></div>
+            <div class="social-link">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-google"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+                
+                <span ></span>
+            </div>
+        </div>
+
+        <div class="register-form form-container">
+            <h2> Register </h2>
+            <form action="#" method="post">
+                <div class="input-field">
+                    <span class="fas icon fa-user"></span>
+                    <input type="text" name="username" id="username">
+                    <label for="username"> Username </label>
+                </div>
+                <div class="input-field">
+                    <span class="fas icon fa-envelope"></span>
+                    <input type="email" name="email" id="email">
+                    <label for="email"> Email </label>
+                </div>
+                <div class="input-field">
+                    <span class="fas icon fa-lock"></span>
+                    <input type="password" name="password" id="password">
+                    <label for="password"> Password </label>
+                    <button class="btn-icon fas fa-eye"></button>
+                </div>
+
+                <button class="btn"> Register </button>
+            </form>
+
+            <div class="logreg-link">
+                <p> I have already Account <a href="#" class="login-bt"> Login </a></p>
+            </div>
+
+            <div style="text-align:center; padding: 10px 0; font-size: var(--icon-size); font-weight:bold;"><span style="color: white; text-align: center; "> or </span></div>
+            <div class="social-link">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-google"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+                
+                <span ></span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./assets/js/gsap.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
